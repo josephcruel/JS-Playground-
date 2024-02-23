@@ -12,7 +12,7 @@ app.get("/about", (req, res) => {
     res.end('Welcome to the About page')
 })
 
-app.get("contacts", (req, res) => {
+app.get("/contacts", (req, res) => {
     res.end('Welcome to the Contacts page')
 })
 
@@ -21,7 +21,7 @@ app.get("/hello/:who", (req, res) => {
 })
 
 app.get("/sendnote", (req, res) => {
-    const filePath = path.resolve(_dirname, "notes.txt")
+    const filePath = path.resolve(__dirname, "notes.txt")
     res.sendFile(filePath)
 })
 
